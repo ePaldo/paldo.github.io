@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="expires" content="-1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Internet hotspot - Log in</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="main-container imgsuper">
+                <form>
+
+					<img src="img/logo.svg" alt="logo">
+					<p id="entervup" class="entervup">Enter voucher code</p>
+                    <label>
+                        <input name="username" class="inputclass" id="usrlogin" type="text" value="$(username)" onKeyUp="change();" placeholder="Voucher" />
+                    </label>
+                    <label>
+                        <input name="password" class="inputclass inputp inputpasswordhide" onfocus="this.value=''" id="pswlogin"  type="password" placeholder="Password" />
+                    </label>
+
+
+                </form>
+										<a href="https://portalmt.w3spaces.com/status.html"><div class="btn-submit"> </div></a>
+					<button onClick="openRate()" class="btn-submit btnsub" ></button>
+					<button onClick="toggle()" id="memberlog" class="btn-submit btnsub2"></button>
+					<button onClick="openhowto()" class="btn-submit btnsub3"></button>
+<div class="modal-container" onClick="closeratetoggle()" id="modal_container">
+<div class="modal">
+			<!-- Vouchers Rate Div -->
+			<p class="pheader">Vouchers Rate</p>
+			<div class="table-container">
+			<div class="tableheader">
+	<!------------------------------------------------EDIT YOUR RATES HERE------------------------------->
+			<p>Price</p>
+			<p>Time</p>
+			<p>Data</p>	
+			</div>
+			<div class="table-sub">
+			<p>100</p>
+			<p>2 Hrs</p>
+			<p>Unlimited</p>
+			</div>
+			<div class="table-sub">
+			<p>200</p>
+			<p>5 Hrs</p>
+			<p>Unlimited</p>
+			</div>
+			<div class="table-sub">
+			<p>300</p>
+			<p>1 Day</p>
+			<p>Unlimited</p>
+			</div>
+			<div class="table-sub">
+			<p>400</p>
+			<p>2 Days</p>
+			<p>Unlimited</p>
+			</div>
+
+
+	</div>	<!-- Table-Container Div -->
+			
+
+	</div><!--modal div-->
+	</div><!--modal-container div-->
+<div class="modal-container2"  id="modal_container2">
+<div class="modal2">
+		<button onClick="btnhowto()" class="btn-modal-close">X</button>
+
+		<h1>How to connect to our hotspot</h1>
+		<p>1. Connect your device to wifi named paldo.com</p>
+		<p>2. Purchase a voucher code to us</p>
+		<p>3. Go to your devices' browser and enter the voucher code on portal and connect </p>
+		<p>4. To check your remaining time or pause your time, go to your browser and type paldo.com </p>
+		<h1>Reminders</h1>
+		<p>- Keep your voucher code if it still has remaining time.</p>
+		<p>- Voucher is not sharable to other devices means it is only one voucher per device</p>
+		<p>- Avoid using Network tools while connected to our network. Once we caught you using one of these tools your devices will automatically ban in our network without notice.</p>
+
+		
+	</div><!--modal2 div-->
+	</div><!--modal-container2 div-->
+		
+				<div class="footer-div">
+                <p>&copy; 2022 Paldo Hotspot | <a href="sms:/+639566647700">Contact Us</a></p>
+
+				</div>
+	</div>
+<script src="js/main.js"></script>
+</body>
+
+</html>
