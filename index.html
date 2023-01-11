@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title id="title"></title>
+    <link rel="preload" href="css/style.css" as="style" />
+    <link rel="preload" href="js/main.js" as="script" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+<div class="main-container">
+    <div class="container grid">
+        <div class="box txt-align" id="box">
+            <div class="hotspot-header">
+            <h1>Pbox Internet</h1>
+            <h1>Hotspot</h1>
+            <p>Online Games | Streaming | Browsing</p>
+            <div class="super-icon">
+                <img src="img/supericon.svg" alt="">
+            </div>
+            </div>
+                <div  class="input-container">     
+                    <p class="margin-1-b">Please login to continue</p>
+                    <label> <input class="user-input" onmouseover="hoverlogin(this)" onmouseout="hoverloginout(this)" name="username" id="userlogin" type="text" onKeyUp="change();" value="$(username)" placeholder="Enter Voucher Code"/></label>       
+                    <label> <input name="password" class="user-input user-password" onmouseover="hoverpassword(this)" onmouseout="hoverpasswordout(this)"  onfocus="this.value=''"  id="passwordlogin" type="password" placeholder="Password" /> </label>
+                    <button class="btn btn-connect " style="margin-bottom:5px ;" onclick="window.location.href='status.html';"> Connect </button>
+                    </div>
+                <div class=" box-container grid ">
+                    <button onClick="wifirates()" class="btn btn-wifirates">Wifi Rates</button>
+
+                    <div class="sub-form margin-1">
+                        <p onClick="memberlogin()" class="switcher" id="switcher">Member Login</p>
+                        <form name="login"  action="$(link-login-only)" method="post" $(if chap-id) onSubmit="return doLogin()" >    
+                            <p class="switcher"  onclick="location.href='$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)';">Free Trial</p>
+
+                        </form>                    
+                    </div>     
+                    <div class="device-info grid">
+                        <hr>
+                        <div> <p>ip</p> <p>192.168.2.111</p> </div>
+                        <div> <p>mac</p> <p>98:00:00:AA:AA</p> </div>
+                        <hr>
+                    </div>
+                    <p>By clicking connect.  You agree to our <a href="terms.html">Terms and Service</a></p>
+                </div>
+        </div>
+        <div class="wifi-rate-container" onClick="signbck()" id="wifi-rate">
+            <h1>Wifi Rates</h1>
+            <div class="rate-container">
+                <p>Hour</p>
+                <p>Price</p>
+                <p>Data</p>
+            </div>
+            <div class="rate-container">
+                <p>10 Hrs</p>
+                <p>10 Pesos</p>
+                <p>Unlimited</p>
+            </div>
+            <div class="rate-container">
+                <p>15 Hrs</p>
+                <p>10 Pesos</p>
+                <p>Unlimited</p>
+            </div>
+            <div class="rate-container">
+                <p>24 Hrs</p>
+                <p>10 Pesos</p>
+                <p>Unlimited</p>
+            </div>
+            <div class="rate-container">
+                <p>3 Hrs</p>
+                <p>10 Pesos</p>
+                <p>Unlimited</p>
+            </div>
+            <div class="rate-container">
+                <p>3 Hrs</p>
+                <p>10 Pesos</p>
+                <p>Unlimited</p>
+            </div>
+            <button onClick="loginback()" class="btn btn-small">Back to login</button>
+        </div>
+        <div class="reminder-container" onCLick="signbck()" id="reminder-container">
+            <h4>How to Connect</h4>
+            <ol class="ol-hw">
+                <li>Connect your device to our wifi.</li>
+                <li>Purchase a voucher code.</li>
+                <li>Enter the code to portal and connect</li>
+                <li>To check your remaining time or pause your time, go to your browser and type <span class="domain-title" id="dname"></span> or <span class="domain-title"> 10.5.50.1</span></li>
+            </ol>
+            <h4>Reminder</h4>
+            <ol class="ol-hw">
+                <li>Always keep your voucher code</li>
+            </ol>
+            <button onClick="loginback()" class="btn btn-small grid">Back to login</button>
+        </div>
+        <footer>
+            <p class="footer-header">Pbox Internet Cafe  	&#169; 2023</p>
+            <p><span class="faqs"  onclick="faqs()">How to connect</span> | <span><a href="sms:+63000101010">Contact</a></span></p>
+        </footer>
+</div>
+</body>
+
+</html>

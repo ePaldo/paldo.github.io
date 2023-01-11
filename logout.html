@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title id="title"></title>
+<link rel="preload" href="css/style.css" as="style" />
+<link rel="preload" href="js/main.js" as="script" />
+<link rel="stylesheet" href="css/style.css" />
+<script src="js/main.js" defer></script>
+</head>
+<body class="preload">
+    <div class="main-container">
+        <div class="container grid txt-align">
+            <div class="box status-container">
+                <div class="hotspot-header ">
+                    <h1>Pbox Internet</h1>
+                    <h1>Hotspot</h1>
+                    <p>Online Games | Streaming | Browsing</p>
+                    <div class="super-icon">
+                        <img src="img/supericon.svg" alt="">
+                    </div>
+                    </div>
+                    <div class="timer-container discon margin-1-b">
+                        <h2>Device Info</h2>
+                        <div class="device-header">
+                            <p>Status</p>
+                            <p >Disconnected</p>
+                        </div>
+                        <div class="device-header">
+                            <p>Remaining Time:</p>
+                            <p class="trtime">Calculating..</p>
+                        </div>
+                    </div>
+                    <div class="device-container">
+                        <div class="device-header">
+                            <p>Voucher Code</p>
+                            <p>9dfkisd535</p>
+                        </div>
+    
+                        <div class="device-header">
+                            <p>Ip Address</p>
+                            <p>192.168.2.111</p>
+                        </div>
+                        <div class="device-header">
+                            <p>Mac Address</p>
+                            <p>AA:01:0O:45:87</p>
+                        </div>
+                        <div class="device-header">
+                            <p>Total Downloads</p>
+                            <p>--</p>
+                        </div>     
+                        <div class="device-header">
+                            <p>Total Uploads</p>
+                            <p>--</p>
+                        </div>                
+                    </div>
+                <form>
+                    <button class="btn btn-small " style="margin-bottom:5px ;" onclick="window.location.href='/status.html';"> Resume </button>
+                </form>
+    </div>
+    <footer>
+        <p class="footer-header">Pbox Internet Cafe  	&#169; 2023</p>
+        <p><a href="">Contact</a></p>
+    </footer>
+        </div> 
+            </div> 
+            <script>
+                var seconds = 9999;
+                var days = Math.floor(seconds / (3600*24));
+                seconds  -= days*3600*24;
+                var hrs   = Math.floor(seconds / 3600);
+                seconds  -= hrs*3600;
+                var mnts = Math.floor(seconds / 60);
+                seconds  -= mnts*60;
+                const rtime = document.getElementsByClassName("trtime");
+                document.getElementsByClassName("trtime")[0].innerHTML = days+"d "+hrs+"h "+mnts+"m "+seconds+"s ";
+                    if (seconds <= 0) {
+                    document.getElementsByClassName("trtime")[0].innerHTML = days+"d "+hrs+"h "+mnts+"m "+seconds+"s ";
+                document.getElementsByClassName("trtime")[2].innerHTML = days+"d "+hrs+"h "+mnts+"m "+seconds+"s ";
+                    }
+                    document.getElementById('title').innerHTML = window.location.hostname + " | Logout";	  
+                $(window).load(function() {
+                    $("body").removeClass("preload");
+                    });
+            </script> 
+</body>
+</html>
