@@ -1,91 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />   
-<title id="title"></title>
-<link rel="preload" href="css/style.css" as="style" />
-<link rel="preload" href="js/main.js" as="script" />
-<link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
 <script src="js/main.js" defer></script>
 </head>
 <body>
     <div class="main-container">
-        <div class="container grid txt-align">
-            <div class="box status-container">
-                <div class="hotspot-header ">
-                    <h1>Pbox Internet</h1>
-                    <h1>Hotspot</h1>
-                    <p>Online Games | Streaming | Browsing</p>
-                    <div class="super-icon">
-                        <img src="img/supericon.svg" alt="">
-                    </div>
-                    </div>
-                <div class="timer-container margin-1-b">
-                    <h2>Device Info</h2>
-                    <div class="device-header">
-                        <p>Status</p>
-                        <p>Connected</p>
-                    </div>
-                    <div class="device-header">
-                        <p>Remaining Time:</p>
-                        <p class="trtime">Calculating..</p>
-                    </div>
+        <div class="login-container">
+            <div class="hotspot-name">
+                <img src="./img/paldo_logo.svg" alt="">
+                <p>Online Games | Streaming | Browsing</p>
+            </div>  
+            <div class="time-container">
+                <p>Remaining Time</p>
+                <input type="hidden" name="timer" id="get-time" value=9999 />
+                <h2 class="remain-time">Calculating..</h2>
                 </div>
-                <div class="device-container">
-                    <div class="device-header">
-                        <p>Voucher Code</p>
-                        <p>9dfkisd535</p>
+                <input type="submit" class="btn btn-connect btn-bg" onclick="window.location='./logout.html'" value="Pause">
+                <div class="device-info">
+                    <div class="info">
+                        <p>IP</p>
+                        <p>192.168.2.98</p>
                     </div>
-
-                    <div class="device-header">
-                        <p>Ip Address</p>
-                        <p>192.168.2.111</p>
+                    <div class="info">
+                        <p>MAC</p>
+                        <p>00:15:5D:02:63:00</p>
                     </div>
-                    <div class="device-header">
-                        <p>Mac Address</p>
-                        <p>AA:01:0O:45:87</p>
-                    </div>
-                    <div class="device-header">
+                    <div class="info">
                         <p>Total Downloads</p>
-                        <p>--</p>
-                    </div>     
-                    <div class="device-header">
+                        <p>5689</p>
+                    </div>
+                    <div class="info">
                         <p>Total Uploads</p>
-                        <p>--</p>
-                    </div>                
+                        <p>0000</p>
+                    </div>
+                    <div class="info">
+                        <p>Voucher Code</p>
+                        <p>9eci$09odfd</p>
+                    </div>
                 </div>
-                <button class="btn btn-small " style="margin-bottom:5px ;" onclick="window.location.href='https://hssample.onrender.com/logout.html';"> Pause </button>
-    </div> <!--card-->
-    <footer>
-        <p class="footer-header">Pbox Internet Cafe  	&#169; 2023</p>
-        <p><span class="faqs"  onclick="faqs()">How to connect</span> | <span><a href="sms:+63000101010">Contact</a></span></p>
-    </footer>
-        </div> <!--container-->
-            </div> <!--Main-container-->
-<script>
-    var seconds = 9999;
-    var countDownDate = new Date(Date.now()+ seconds*1000).getTime();
-    var x = setInterval(function() {
-        var now = new Date().getTime();
-        var distance = countDownDate - now;
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        var time_string = days ? days + "d ": "";
-        time_string += hours ?  hours + "h ": "";
-        time_string += minutes ?  minutes + "m ": "";
-        time_string += seconds ?  seconds + "s ": "";
-        const rtime = document.getElementsByClassName("trtime");
-        document.getElementsByClassName("trtime")[0].innerHTML = time_string;
-        document.getElementsByClassName("trtime")[2].innerHTML = time_string;
-        if (distance < 0) {
-        clearInterval(x);
-        document.getElementsByClassName("trtime")[0].innerHTML = "Trial Expired";
-        document.getElementsByClassName("trtime")[2].innerHTML = "Voucher Expired ";
-        }
-    }, 1000); 	
-</script>  
+                <footer class="login-footer">
+                    <p class="footer-title">Pbox Internet Cafe © 2024</p> 
+                    <div class="footer-grid">
+                    <a href="sms:+639101234114">Contact</a>
+                    </div>
+                </footer> 
+        </div>
+    </div>
 </body>
 </html>
